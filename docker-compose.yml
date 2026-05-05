@@ -1,0 +1,10 @@
+services:
+  vscode:
+    build: .
+    container_name: vscode-web
+    ports:
+      - "8003:8000"
+    volumes:
+      - .:/workspace
+    security_opt:
+      - seccomp:unconfined
